@@ -1,38 +1,42 @@
-<div align="center">
+# 🤖 mycobot_ros2
+**6-DOF Manipulator ROS 2 Kinematic Modeling**
 
-  <h1>🤖 mycobot_ros2</h1>
-  <p><b>ROS 2 Jazzy Description Metapackage & URDF Visualizer for myCobot 280</b></p>
-
-  <p>
-    <a href="https://docs.ros.org/en/jazzy/"><img src="https://img.shields.io/badge/ROS2-Jazzy-blue?style=for-the-badge&logo=ros" alt="ROS 2 Jazzy"></a>
-    <a href="http://wiki.ros.org/xacro"><img src="https://img.shields.io/badge/URDF-Xacro-orange?style=for-the-badge" alt="Xacro"></a>
-    <a href="https://github.com/ManjariMeedeniya/mycobot_ros2/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"></a>
-  </p>
-
-  <p>Developed as part of practical exploration in robot kinematics, kinematic modeling, and visualization within ROS 2.</p>
-
-</div>
+> ⚠️ **Project Status: Ongoing / Learning Milestone**  
+> *This repository is an ongoing project created as part of my learning journey in ROS 2 Jazzy, robot kinematics, and URDF/Xacro modeling. Core package architecture and asset integration are established, with full assembly modularization currently in progress.*
 
 ---
 
 ## 📌 Overview
 
-This repository contains the `mycobot_ros2` metapackage and `mycobot_description` package for the **Elephant Robotics myCobot 280** 6-DOF articulated robotic arm. 
-
-It provides complete **URDF/Xacro** kinematic models, high-resolution 3D visual `.dae` mesh assets, collision geometries, and customized launch configurations for inspecting and driving joint transformations in **RViz 2**.
+This repository contains the `mycobot_ros2` metapackage and `mycobot_description` package for modeling a **myCobot 280 6-DOF robotic arm**. The goal of this project is to build modular, parametric URDF/Xacro description models and visualization pipelines for robotic manipulators within ROS 2.
 
 ---
 
-## 🛠️ Package Structure
+## 🛠️ Current Implementation Progress
 
-```text
-mycobot_ros2/
-├── mycobot_ros2/             # Metapackage configuration
-│   └── package.xml
-└── mycobot_description/      # Robot description package
-    ├── launch/               # RViz2 visualization launch files
-    ├── meshes/               # 3D visual & collision mesh assets (.dae)
-    ├── rviz/                 # Display configuration files (.rviz)
-    ├── urdf/                 # Kinematic macro definitions (.urdf / .xacro)
-    ├── CMakeLists.txt
-    └── package.xml
+* **ROS 2 Infrastructure:** Created `mycobot_ros2` metapackage and `mycobot_description` package using `ament_cmake`.
+* **CAD Asset Pipeline:** Integrated 3D COLLADA (`.dae`) mesh assets with configured build/export rules in `CMakeLists.txt` and `package.xml`.
+* **Kinematic Modeling (In Progress):** Developing modular Xacro macro files to define 6-DOF link dynamics, mass/inertia matrices, and joint constraints.
+
+---
+
+## 🎯 Next Steps & Roadmap
+
+* Complete full assembly integration (`mycobot_280.urdf.xacro`) combining base, 6-axis arm, and adaptive gripper macros.
+* Resolve workspace dependencies using `rosdep`.
+* Launch real-time joint state control and frame transformation visualization in **RViz 2**.
+* Export kinematic tree diagrams via `urdf_to_graphiz`.
+
+---
+
+## 🧑‍💻 Author
+
+**Manjari Meedeniya**  
+Department of Electronic and Telecommunication Engineering  
+University of Moratuwa, Sri Lanka  
+
+---
+
+## 📜 License
+
+Distributed under the BSD-3-Clause License.
