@@ -29,14 +29,6 @@ This repository contains the `mycobot_ros2` metapackage and `mycobot_description
 
 ---
 
-## 🧑‍💻 Author
-
-**Manjari Meedeniya**  
-Department of Electronic and Telecommunication Engineering  
-University of Moratuwa, Sri Lanka  
-
----
-
 ## 📜 License
 
 Distributed under the BSD-3-Clause License.
